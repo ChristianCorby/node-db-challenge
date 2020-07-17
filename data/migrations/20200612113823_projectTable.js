@@ -7,7 +7,7 @@ exports.up = function (knex) {
                 .notNullable();
             tbl.text('project_desc')
 
-            tbl.integer('completed')
+            tbl.boolean('completed')
                 .notNullable();
         })
 

@@ -45,8 +45,9 @@ router.post('/Project', async (req, res) => {
             res.status(404).json('Unable to add new Project')
         }
     }
-    catch{
-        res.status(500).json('Error with Database')
+    catch(err){
+        console.log('POST /Project', err);
+        res.status(500).json({error: 'Error with Database' , error:err});
     }
 })
 
